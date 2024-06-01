@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <style>
+      *
+      {
+        font-family: 'Poppins',sans-serif ;
+      }
+      body{
+        margin: 0%;
+        padding: 0%;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: 'Poppins',sans-serif;
+        background-image: url(firefly1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+      }
+
+      .main
+      {
+        width:350px;
+        height: 500px;
+       
+        background-color: rgba(255, 255, 255,0.77);
+        border-radius:25px;
+        box-shadow: 5px 20px 50px #000;
+      }
+
+      #chk
+      {
+        display: none;
+
+      }
+
+      .signup
+      {
+        position: relative;
+        width:100%;
+        height: 100%;
+      }
+
+      .label
+      {
+        justify-content: center;
+        display: flex;
+        margin: 30px;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+        color:#000;
+        font-weight: bold;
+        font-size: 2.3em;
+      }
+
+      .input{
+        width:90%;
+        height: 40px;
+        border-radius: 12px;
+        background: linear-gradient(to right,rgb(155, 212, 243),rgb(69, 157, 229),rgb(5, 82, 165));
+        padding: 10p;
+        margin: 10px auto;
+        border:none;
+      }
+
+      .submit_button
+    { 
+      width: 60px;
+      height: 30px;
+      border-radius: 5px;
+      background-color: rgb(46, 149, 238);
+      color: white;
+      border: 0;
+      cursor: pointer;
+      margin-left: 50px;
+      justify-content: center;
+      
+    }
+
+    .cancel_button {
+      width: 60px;
+      height: 30px;
+      border-radius: 5px;
+      background-color: rgb(46, 149, 238);
+      color: white;
+      border: 0;
+      cursor: pointer;
+      margin-left: 10px;
+      justify-content: center;
+      
+    }
+
+    .submit_button:hover, .cancel_button:hover {
+      background-color: rgb(22, 137, 237);
+
+    }
+
+    .login
+    {
+      height: 460px;
+      background-color: rgba(255, 255, 255,0.77);
+      border-radius: 25px;
+      
+      transform: translateY(-180px);
+      transition: .8s ease-in-out;
+    }
+
+    .login label
+    {
+      color:#000;
+      transform:scale(.6) ;
+    }
+
+    .chk:checked ~.login
+    {
+      transform: translateY(-500px);
+    }
+
+    .chk:checked ~.login label
+    {
+      transform: scale(1);
+    }
+
+    .chk:checked ~.signup label
+    {
+      transform: scale(.6);
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
+
+      <div class="signup">
+        
+   
+    <div class="form2">
+    <form action="./password.html">
+      <label class="label" for="chk" aria-hidden="true">Sign up</label>
+      <input class="input" type="text" id="fname" name="fname" placeholder="First name" size="30"  required><br><br>
+      <input class="input" type="text" id="lname" name="lname" placeholder="Last name" size="30"  required>
+      <br><br>
+      <label for="DOB">Date Of Birth : </label><br>
+      <input class="input" type="date" id="DOB" name="DOB"  required>
+      <br><br>
+      <label>Gender :</label><br>
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="gender">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="gender">Female </label>
+      <input type="radio" id="other" name="gender" value="other" required>
+      <label for="gender">Other </label><br><br>
+      <input class="input" type="email" id="email" name="email" placeholder="Email" size="32" required>
+      <br><br>
+
+      </div>
+      <button type="submit" class="submit_button" style="margin-left:35%">Sign up</button>
+      <button type="button" class="cancel_button">Cancel</button>
+    </form>
+
+      </div>
+
+      <div class="login">
+       
+    
+
+    <form  >
+      <label class="label" for="chk" aria-hidden="true">Login</label>
+      <input class="input" type="text" id="uName" name="uName" placeholder="USER NAME" required><br><br>
+      <input class="input" type="password" id="password" name="password" placeholder="PASSWORD" required><br><br>
+    
+
+    <button type="button"  class="submit_button" style="margin-left: 30%;">Login</button>
+    <button type="button" onclick="alert('Login canceled')" class="cancel_button">Cancel</button>
+
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var dob = document.getElementById("DOB").value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var email = document.getElementById("email").value;
+  
+        if (fname === "" || lname === "" || dob === "" || gender === null || email === "") {
+          alert("Please fill in all fields.");
+          return false;
+        }
+  
+        submitSignIn(); 
+        return true;
+      }
+  
+      function submitSignIn() {
+        window.location.href = "password.html";
+      }
+    </script>
+
+
+
+
+
+  </body>
+</html>
