@@ -25,7 +25,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px;
-      box-sizing: border-box; /* Include padding in width/height calculation */
+      box-sizing: border-box;
     
       
     }
@@ -64,10 +64,10 @@
 
     .form {
       padding: 20px;
-      margin: 10% auto; /* Center the form horizontally */
+      margin: 10% auto;
       width: 350px;
       border-radius: 25px;
-      background-color: hsla(0, 0%, 100%, 0.77); /* Semi-transparent white background */
+      background-color: hsla(0, 0%, 100%, 0.77); 
     }
 
     .password1 {
@@ -76,8 +76,8 @@
       height: 40px;
       width: 100%; 
       margin-bottom: 10px; 
-      box-sizing: border-box; /* Include padding in width calculation */
-      padding: 5px; /* Add some padding */
+      box-sizing: border-box; 
+      padding: 5px; 
     }
 
     .set_button,
@@ -89,7 +89,7 @@
       color: white;
       border: 0;
       cursor: pointer;
-      margin-right: 10px; /* Adjust margin between buttons */
+      margin-right: 10px; 
     }
 
     .set_button:hover,
@@ -125,10 +125,25 @@
       <input class="password1" type="password" id="password" name="password" placeholder="PASSWORD" required><br><br>
     
 
-    <button type="button"  class="set_button" style="margin-left: 30%;">Login</button>
+    <button type="button" onclick="login()" class="set_button" style="margin-left: 30%;">Login</button>
     <button type="button" onclick="alert('Login canceled')" class="cancel_button">Cancel</button>
 
   </form>
   </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('uName').value;
+      const password = document.getElementById('password').value;
+
+      if (username === "mohith" && password === "123456") {
+        alert("Login successful");
+        
+        window.location.href = "clickbook.html"; 
+      } else {
+        alert("Invalid username or password");
+      }
+    }
+  </script>
 </body>
 </html>
