@@ -4,7 +4,7 @@
   <style>
     *
     {
-     font-family: 'Poppins',sans-serif;
+      font-family: 'Poppins',sans-serif;
     }
 
     body {
@@ -20,13 +20,11 @@
   
     nav {
       width: 100%;
-      
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px;
+      padding: 5px;
       box-sizing: border-box; /* Include padding in width/height calculation */
-    
       
     }
 
@@ -35,10 +33,12 @@
         width:1px;
       }
   
-    nav ul {
+    nav ul 
+    {
       list-style: none;
       margin: 0;
       padding: 0;
+      margin-right: 20px;
     }
   
     nav ul li {
@@ -64,7 +64,7 @@
   
     .form {
       padding: 20px;
-      margin: 5% auto; /* Center the form horizontally */
+      margin: 3% auto; /* Center the form horizontally */
       width: 400px;
       border-radius: 25px;
       background-color:  rgba(255, 255, 255, 0.77); /* Semi-transparent white background */
@@ -93,13 +93,13 @@
       margin-left: 10px;
     }
 
-    .submit_button:hover, .cancel_button:hover {
+    .submit_button:hover, .cancel_button:hover 
+    {
       background-color: rgb(22, 137, 237);
-
     }
 
-    .input{
-      
+    .input
+    {
       border-radius: 15px;
       height:40px;
       width: 125%;
@@ -125,11 +125,11 @@
     
   </style>
 </head>
-<body style="background-image: url(firefly1.jpg);">
+<body style="background-image: url(asserts/firefly1.jpg);">
 
   <div class="welcome">
     <nav>
-      <img src="your_logo_image_path_here" class="logo">
+      <p style="font-weight:900;color:white;font-size:x-large"><b>Rail Connect</b></p>
       <ul>
         <li><a href="welcome.html">HOME</a></li>
         <li><a href="login.html">LOGIN</a></li>

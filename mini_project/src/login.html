@@ -4,11 +4,11 @@
   <style>
     *
     {
-     font-family: 'Poppins',sans-serif;;
+      font-family: 'Poppins',sans-serif;;
     }
 
     body {
-      background-image: url(firefly1.jpg);
+      background-image: url(asserts/firefly1.jpg);
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-size: cover;
@@ -20,25 +20,19 @@
 
     nav {
       width: 100%;
-      
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px;
-      box-sizing: border-box;
-    
-      
+      padding: 5px;
+      box-sizing: border-box; 
     }
 
-    nav.logo
-      {
-        width:1px;
-      }
   
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      margin-right: 20px;
     }
   
     nav ul li {
@@ -64,7 +58,7 @@
 
     .form {
       padding: 20px;
-      margin: 10% auto;
+      margin: 5% auto;
       width: 350px;
       border-radius: 25px;
       background-color: hsla(0, 0%, 100%, 0.77); 
@@ -107,7 +101,7 @@
 <body>
   <div class="welcome">
     <nav>
-      <img src="your_logo_image_path_here" class="logo">
+      <p style="font-weight:900;color:white;font-size:x-large;margin-left:8px"><b>Rail Connect</b></p>
       <ul>
         <li><a href="welcome.html">HOME</a></li>
         <li><a href="signup.html">SIGN UP</a></li>
@@ -121,8 +115,8 @@
     <h2 style="text-align:center;font-family:Verdana, Geneva, Tahoma, sans-serif">LOGIN</h2>
 
     <form class="input" >
-      <input class="password1" type="text" id="uName" name="uName" placeholder="USER NAME" required><br><br>
-      <input class="password1" type="password" id="password" name="password" placeholder="PASSWORD" required><br><br>
+      <input class="password1" type="text" id="uName" name="uName" placeholder="User Name" required><br><br>
+      <input class="password1" type="password" id="password" name="password" placeholder="Password" required><br><br>
     
 
     <button type="button" onclick="login()" class="set_button" style="margin-left: 30%;">Login</button>
@@ -136,7 +130,7 @@
       const username = document.getElementById('uName').value;
       const password = document.getElementById('password').value;
 
-      if (username === "G.Mohith" && password === "123456") {
+      if (username === "Mohith" && password === "123456") {
         alert("Login successful");
         
         window.location.href = "clickbook.html"; 
